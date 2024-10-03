@@ -21,14 +21,15 @@ export default function ClippedDrawer() {
   const drawerWidth = 240;
 
   const rows = [
-    { id: 1, firstName: 'Rabiya', lastName: 'Nadeem', email: 'rabiya.nadeem@bkstack.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Banned' },
-    { id: 2, firstName: 'Shifa', lastName: 'Fatima', email: 'shifa@example.com', age: 22, type: 'Verified Business User', lastActive: '12/02/23 @ 12:30pm PT', flaggedItems: 3, status: 'Active' },
+    { id: 1, firstName: 'Rabiya', lastName: 'Nadeem', email: 'rabiya.nadeem@bkstack.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Active' },
+    { id: 2, firstName: 'Shifa', lastName: 'Fatima', email: 'shifa@example.com', age: 22, type: 'Verified Business User', lastActive: '12/02/23 @ 12:30pm PT', flaggedItems: 3, status: 'Banned' },
     { id: 3, firstName: 'Amina', lastName: 'Hafeez', email: 'amina@example.com', age: 24, type: 'App User', lastActive: '12/03/23 @ 12:30pm PT', flaggedItems: 2, status: 'Suspended' },
-    { id: 4, firstName: 'FirstNAme', lastName: 'LastName', email: 'user4@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Banned' },
-    { id: 5, firstName: 'FirstNAme', lastName: 'LastName', email: 'user5@example.com', age: 22, type: 'Verified Business User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Active' },
-    { id: 6, firstName: 'FirstNAme', lastName: 'LastName', email: 'user6@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Banned' },
-    { id: 7, firstName: 'FirstNAme', lastName: 'LastName', email: 'user7@example.com', age: 22, type: 'Verified Business User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Suspended' },
-    { id: 8, firstName: 'FirstNAme', lastName: 'LastName', email: 'user8@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Active' },
+    { id: 4, firstName: 'FirstNAme4', lastName: 'LastName4', email: 'user4@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Banned' },
+    { id: 5, firstName: 'FirstNAme5', lastName: 'LastName5', email: 'user5@example.com', age: 22, type: 'Verified Business User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Active' },
+    { id: 6, firstName: 'FirstNAme6', lastName: 'LastName6', email: 'user6@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Banned' },
+    { id: 7, firstName: 'FirstNAme7', lastName: 'LastName7', email: 'user7@example.com', age: 22, type: 'Verified Business User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Suspended' },
+    { id: 8, firstName: 'FirstNAme8', lastName: 'LastName8', email: 'user8@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Active' },
+    { id: 9, firstName: 'FirstNAme9', lastName: 'LastName9', email: 'user9@example.com', age: 22, type: 'App User', lastActive: '12/01/23 @ 12:30pm PT', flaggedItems: 1, status: 'Suspended' },
       ];
 
   const columns = [
@@ -102,19 +103,13 @@ export default function ClippedDrawer() {
 
       <Box
         component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, marginTop: '45px' }}
+        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, marginTop: '35px', }}
       >
-        <Typography variant="h5" gutterBottom sx={{ bgcolor: '#e7e8ff' }}>
-          UON Users
+       
+        <Typography component="div" sx={{ width: '100%' }}>
+          <h3 style={{ backgroundColor: 'lightblue', padding: '10px', width: '100%' }}>UON Users</h3>
         </Typography>
 
-        <Tabs value={tabIndex} onChange={handleTabChange}>
-          <Tab label="Active" />
-          <Tab label="Suspended" />
-          <Tab label="Banned" />
-        </Tabs>
-
-  
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 ,marginTop:"10px"}}>
           <TextField
             placeholder="Search by first name..."
@@ -125,6 +120,15 @@ export default function ClippedDrawer() {
           />
           <Button variant="contained" color="primary">Filter</Button>
         </Box>
+
+        <Tabs value={tabIndex} onChange={handleTabChange}>
+          <Tab label="Active" />
+          <Tab label="Suspended" />
+          <Tab label="Banned" />
+        </Tabs>
+
+  
+       
 
       
         <Box sx={{ height: 580, width: '100%' }}>
